@@ -1,9 +1,11 @@
 ---
-import LogoCAD from "../logo-CAD.astro";
+import LogoCAD from "../logo-CAD.astro"
+import castell_img from '../../images/hero_castell-nb.png'
 // const  themeColor  = '#676767';
-const zoomResolution = '1'; 
-const isDark = false;
-const themeColor = isDark ? '#ffffff' : '#676767';
+const zoomResolution = '1'
+const isDark = false
+const themeColor = isDark ? '#ffffff' : '#676767'
+
 ---
 <script is:inline>import { transitionEnabledOnThisPage } from "astro:transitions/client";
 
@@ -40,22 +42,6 @@ const themeColor = isDark ? '#ffffff' : '#676767';
 
     <div  class="flex-1" style="align-self: center; display: flex; flex-direction: column;" data-zoom={zoomResolution}> 
       
-        <script is:inline>    
-            let zoom = '0';
-            const mediaQuery = window.matchMedia("(max-width: 768px)");    
-            if (mediaQuery.matches) {
-                zoom = '0';
-                console.log("You are using a mobile device!"+zoom);
-                
-            } else {
-                zoom = '2.5';
-                console.log("You are not using a mobile device"+zoom);                
-                
-            }
-            document.querySelector('[data-zoom]').setAttribute('data-zoom', zoom);
-            console.log('After than all the zoom gonna be is : '+zoom);
-                   
-        </script>   
 <script is:inline>
     function toggleDarkMode() {
         const elementT = document.documentElement;
@@ -77,10 +63,8 @@ const themeColor = isDark ? '#ffffff' : '#676767';
     // Ejecutar cuando cambia el tema
     document.addEventListener('theme-change', toggleDarkMode);
 </script>
-
-         
-    
-         <LogoCAD zoom={zoomResolution} theme={themeColor} theme_text="#00aeff"></LogoCAD>
+        <img src={castell_img.src} width={castell_img.width} height={castell_img.height} alt="A barking dog." />
+       
          <button id="button-action-hero " style="max-width: 155px ; color: themeColor; border-top: 1px solid #67676700  " class="  mx-auto  px-10 py-2 bg-transparent hover:bg-sky-400 rounded-sm text-center  " >
             Click here!
         </button >
