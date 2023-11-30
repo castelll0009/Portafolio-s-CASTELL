@@ -1,6 +1,9 @@
 ---
 import LogoCAD from "../logo-CAD.astro"
 import castell_img from '../../images/hero_castell-nb.png'
+import react from "@astrojs/react";
+import Swiper from "../MySwiper.jsx"
+
 
 // const  themeColor  = '#676767';
 const zoomResolution = '1'
@@ -85,28 +88,18 @@ const themeColor = isDark ? '#ffffff' : '#676767'
         
 </header>
 <header id="header-hero" class="flex flex-col md:flex-row  md:flex-row p-20 gap-5 text-left text-center md:text-left rounderd-xl ">
-    <div class="flex-1">
-        <h1 class="text-5xl font-bold pb-2">Change As You Need!</h1>
-        <p class="my-4 text-2xl">With us, power in your hands. Websites, ads, designs and total control. Your vision, digital presence all in one. Face the digital revolution.
-            </p>
-            <p class="my-4 text-2xl">
-                transformation begins here with something truly authentic.
-            </p>
-       
-    </div>
 
 
-    <div  class="flex-1" style="align-self: center; display: flex; flex-direction: column;" data-zoom={zoomResolution}> 
+
+    <div  class="flex-1 text-center" style="align-self: center; display: flex; flex-direction: column; background: red;" data-zoom={zoomResolution}> 
       
     
 
 
          
-    
-         <LogoCAD zoom={zoomResolution} theme={themeColor} theme_text="#00aeff"></LogoCAD>
-         <button id="button-action-hero " style="max-width: 155px ; color: themeColor; border-top: 1px solid #67676700  " class="  mx-auto  px-10 py-2 bg-transparent hover:bg-sky-400 rounded-sm text-center  " >
-            Click here!
-        </button >
+        <!-- <Swiper ></Swiper> -->
+         <!-- <LogoCAD zoom={zoomResolution} theme={themeColor} theme_text="#00aeff"></LogoCAD> -->
+     
              
     </div>
 
