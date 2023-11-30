@@ -1,10 +1,12 @@
 ---
 import LogoCAD from "../logo-CAD.astro"
 import castell_img from '../../images/hero_castell-nb.png'
+
 // const  themeColor  = '#676767';
 const zoomResolution = '1'
 const isDark = false
 const themeColor = isDark ? '#ffffff' : '#676767'
+
 
 ---
 <script is:inline>import { transitionEnabledOnThisPage } from "astro:transitions/client";
@@ -30,12 +32,14 @@ const themeColor = isDark ? '#ffffff' : '#676767'
 
 <header id="header-hero" class="flex flex-col md:flex-row  md:flex-row p-20 gap-5 text-left text-center md:text-left rounderd-xl ">
     <div class="flex-1">
-        <h1 class="text-5xl font-bold pb-2">Change As You Need!</h1>
-        <p class="my-4 text-2xl">With us, power in your hands. Websites, ads, designs and total control. Your vision, digital presence all in one. Face the digital revolution.
+        <h1 class="text-5xl font-bold pb-2">CASTELL'S Portafolio</h1>
+        <p class="my-4 text-2xl text-body">I know you're looking for something really good to help you realize your ideas.
             </p>
-            <p class="my-4 text-2xl">
-                transformation begins here with something truly authentic.
+            <p class="my-4 text-2xl text-body">
+                I'm going to give you that, Full Stack Developer.
             </p>
+
+           <a href="https://wa.link/wrh5ev" class="text-green-500">Let's Chat</a>
        
     </div>
 
@@ -63,7 +67,7 @@ const themeColor = isDark ? '#ffffff' : '#676767'
     // Ejecutar cuando cambia el tema
     document.addEventListener('theme-change', toggleDarkMode);
 </script>
-        <img src={castell_img.src} width={castell_img.width} height={castell_img.height} alt="A barking dog." />
+        <img src={castell_img.src} width="500" height="500" alt="A barking dog." />
        
          <button id="button-action-hero " style="max-width: 155px ; color: themeColor; border-top: 1px solid #67676700  " class="  mx-auto  px-10 py-2 bg-transparent hover:bg-sky-400 rounded-sm text-center  " >
             Click here!
@@ -94,43 +98,8 @@ const themeColor = isDark ? '#ffffff' : '#676767'
 
     <div  class="flex-1" style="align-self: center; display: flex; flex-direction: column;" data-zoom={zoomResolution}> 
       
-        <script is:inline>    
-            let zoom = '0';
-            const mediaQuery = window.matchMedia("(max-width: 768px)");    
-            if (mediaQuery.matches) {
-                zoom = '0';
-                console.log("You are using a mobile device!"+zoom);
-                
-            } else {
-                zoom = '2.5';
-                console.log("You are not using a mobile device"+zoom);                
-                
-            }
-            document.querySelector('[data-zoom]').setAttribute('data-zoom', zoom);
-            console.log('After than all the zoom gonna be is : '+zoom);
-                   
-        </script>   
-<script is:inline>
-    function toggleDarkMode() {
-        const elementT = document.documentElement;
-        const isDarkMode = elementT.classList.contains("dark");
-        
-        // Asegúrate de realizar las acciones necesarias según el valor de isDarkMode
-        const themeColor = isDarkMode ? '#ffffff' : '#676767';        
-          // Actualiza el tema del LogoCAD
-          const logoCAD = document.querySelector('LogoCAD');
-        if (logoCAD) {
-            logoCAD.setAttribute('theme', themeColor);
-        }
-        // alert(isDarkMode+themeColor);
-    }
     
-    // Ejecutar cuando se carga la página
-    document.addEventListener('DOMContentLoaded', toggleDarkMode);
 
-    // Ejecutar cuando cambia el tema
-    document.addEventListener('theme-change', toggleDarkMode);
-</script>
 
          
     
