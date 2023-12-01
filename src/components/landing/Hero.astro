@@ -2,6 +2,7 @@
 import LogoCAD from "../logo-CAD.astro"
 import castell_img from '../../images/castell-pro.png'
 import astro_logo from '../../images/astro-banner.png'
+import arrow_down from '../../images/arrow-down.png'
 
 import react from "@astrojs/react";
 import Swiper from "../MySwiper.jsx"
@@ -41,7 +42,7 @@ header div p{
 </style>
 
 
-<header id="header-hero" class="flex flex-col md:flex-row  md:flex-row p-20 gap-5 text-left text-center md:text-left rounderd-xl ">
+<header id="header-hero" class="flex flex-col md:flex-row  pb-0 p-20 gap-5 text-left text-center md:text-left rounderd-xl ">
     <div class="flex-1">
         <span class="text-black bg-third px-3  rounded-sm mr-2 mb-2 ">Full Stack Developer</span>
         <span class="text-black bg-third px-3  rounded-sm mr-2 mb-2 ">Systems Engineer</span> <br>
@@ -50,7 +51,7 @@ header div p{
         <p class="my-4 text-xl text-body">I know you're looking for something really good to help you realize your ideas.
             </p>
             <p class="my-4 text-xl text-body mb-20">
-                I'm going to give you that, Ivan Esteban Castillo.
+                I'm going to give you that.
             </p>
 
            <a href="https://wa.link/wrh5ev" class="text-third text-2xl hover:underline">Let's Chat</a>
@@ -63,23 +64,25 @@ header div p{
         <div class="wrapper">
   
             
-            <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" class="image--cover ">
+            <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" class="shadow-circle shadow-circle floating image--cover ">
                         
-            <img src="https://p7.hiclipart.com/preview/780/57/127/node-js-javascript-database-mongodb-native.jpg" class="image--cover">
+            <img src="https://p7.hiclipart.com/preview/780/57/127/node-js-javascript-database-mongodb-native.jpg" class="shadow-circle shadow-circle floating image--cover">
                                                       
-            <img src="https://seeklogo.com/images/S/strapi-icon-logo-2E03188067-seeklogo.com.png" alt="" class="image--cover" />
+            <img src="https://seeklogo.com/images/S/strapi-icon-logo-2E03188067-seeklogo.com.png" alt="" class="shadow-circle shadow-circle floating image--cover" />
 
-            <img src={astro_logo.src} class="image--cover">    
+            <img src={astro_logo.src} class="shadow-circle shadow-circle floating image--cover">    
 
-            <img src="https://www.datocms-assets.com/75941/1657707878-nextjs_logo.png" alt="" class="image--cover" />          
+            <img src="https://www.datocms-assets.com/75941/1657707878-nextjs_logo.png" alt="" class="shadow-circle shadow-circle floating image--cover" />          
        
         </div>
 
         <img src={castell_img.src} width="500" height="500" alt="castell" />
        
-         <button id="button-action-hero " style="max-width: 155px ; color: themeColor; border-top: 1px solid #67676700  " class="  mx-auto  px-10 py-2 bg-transparent hover:bg-sky-400 rounded-sm text-center  " >
+         <a href="#introduction" id="button-action-hero " style="max-width: 155px ; color: themeColor; border-top: 1px solid #67676700  " class=" z-10  mx-auto  px-10 py-2 bg-transparent   rounded-sm text-center  " >
             Click here!
-        </button >
+            <img src={arrow_down.src} class="hover:floating" style="">
+            
+         </a >
              
     </div>
 
@@ -92,15 +95,10 @@ header div p{
     
         
 </header>
-<header id="header-hero" class="flex flex-col md:flex-row  md:flex-row p-20 gap-5 text-left text-center md:text-left rounderd-xl ">
+<header id="header-hero" class="flex flex-col  md:flex-row p-20 gap-5  text-center md:text-left rounderd-xl">
 
 
-
-    <div  class="flex-1 text-center" style="align-self: center; display: flex; flex-direction: column; background: red;" data-zoom={zoomResolution}> 
-      
-    
-
-
+    <div  class="flex-1 text-center " style="align-self: center; display: flex; flex-direction: column; background: red;" data-zoom={zoomResolution}>           
          
         <!-- <Swiper ></Swiper> -->
          <!-- <LogoCAD zoom={zoomResolution} theme={themeColor} theme_text="#00aeff"></LogoCAD> -->
@@ -108,12 +106,15 @@ header div p{
              
     </div>
 
-    <!-- <div class="flex-1 text-right">
-        <h1 class="text-5xl font-bold pb-2">Quickly Adds</h1>
-        <p class="my-4 text-2xl">With cutting-edge Motion Graphics, your product stands out and sells in just 5 seconds.</p>
+    <div class="flex-1 text-justify">
+        <h6 id="introduction">Introduction</h6>
+        <h2 class="text-5xl font-bold pb-2 ">Hello I'm Ivan Esteban Castillo</h2>
+        <h5 class="italic pt-5 pb-5 font-semibold">Constant effort will always give you results.</h5>
+        <p class="my-4 text-xl text-body ">
+            As a professional, my goal is to continually excel, offering excellence in each task. I stay at the forefront of technologies, demonstrating dedication with actions, exceeding standards and leaving a distinctive mark in each role. I drive my colleagues toward excellence, embrace continuous improvement, and face challenges with proactive determination. I adopt new ideas with perseverance, committed to innovation. Every task I undertake is approached with a commitment to exceeding expectations, contributing to overall success, and constantly learning along the way.</p>
        
     </div>
-     -->
+    
     
         
 </header>
@@ -169,5 +170,25 @@ header div p{
     bottom: 10%;
     left: 80%;
 }
+.floating {
+animation: bobble 2s infinite;
+}
+  @keyframes bobble {
+0% {
+transform: translateY(10px);
+}
+50% {
+transform: translateY(15px);
+}
+100% {
+transform: translateY(10px);
+}
 
+}
+.shadow-circle{
+ 
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  box-shadow: 0 19px 38px rgba(0,0,0,0.60), 0 35px 15px rgba(0,0,0,0.22);
+
+}
 </style>
