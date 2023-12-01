@@ -11,12 +11,20 @@ html{
     transition: all ease-in-out 0.3s;
   }
   html body {
-    margin: 0 6vw 0 6vw;
+    /* margin: 0 6vw 0 6vw; */
+    margin: 0px;
+    
+  }
+  html body main {
+    /* margin: 0 6vw 0 6vw; */
+    margin: 0px !important;
     
   }
 html.dark {
     background-color: #202020;
     background-color: #2b2c30;
+    
+    
     
     color: #fff;
   }
