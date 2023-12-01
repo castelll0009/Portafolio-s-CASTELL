@@ -4,7 +4,9 @@ export default {
 	theme: {
 		extend: {
 			colors:{
-				body: "gray"
+				body: "gray",				
+				silver:"silver",
+				third:"#27db84"
 			  }
 		},
 	},
