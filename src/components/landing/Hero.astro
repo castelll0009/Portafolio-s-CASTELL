@@ -42,7 +42,7 @@ header div p{
 </style>
 
 
-<header id="header-hero" class="flex flex-col md:flex-row  pb-0 p-20 gap-5 text-left text-center md:text-left rounderd-xl ">
+<header id="header-hero" class="flex flex-col md:flex-row  pb-0 p-10 md:p-20 gap-5 text-left text-center md:text-left rounderd-xl ">
     <div class="flex-1">        
 
            <div class="md:pl-32">
@@ -81,15 +81,15 @@ header div p{
         <div class="wrapper">
   
             
-            <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" class="shadow-circle shadow-circle floating image--cover ">
+            <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" class=" shadow-circle shadow-circle floating image--cover ">
                         
-            <img src="https://p7.hiclipart.com/preview/780/57/127/node-js-javascript-database-mongodb-native.jpg" class="shadow-circle shadow-circle floating image--cover">
+            <img src="https://p7.hiclipart.com/preview/780/57/127/node-js-javascript-database-mongodb-native.jpg" class=" shadow-circle shadow-circle floating image--cover">
                                                       
-            <img src="https://seeklogo.com/images/S/strapi-icon-logo-2E03188067-seeklogo.com.png" alt="" class="shadow-circle shadow-circle floating image--cover" />
+            <img src="https://seeklogo.com/images/S/strapi-icon-logo-2E03188067-seeklogo.com.png" alt="" class=" shadow-circle shadow-circle floating image--cover" />
 
-            <img src={astro_logo.src} class="shadow-circle shadow-circle floating image--cover">    
+            <img src={astro_logo.src} class=" shadow-circle shadow-circle floating image--cover">    
 
-            <img src="https://www.datocms-assets.com/75941/1657707878-nextjs_logo.png" alt="" class="shadow-circle shadow-circle floating image--cover" />          
+            <img src="https://www.datocms-assets.com/75941/1657707878-nextjs_logo.png" alt="" class=" shadow-circle shadow-circle floating image--cover" />          
        
         </div>
 
@@ -164,6 +164,44 @@ header div p{
 .wrapper img:nth-child(5) {
     bottom: 10%;
     left: 80%;
+}
+@media (max-width: 769px){
+    .wrapper img:nth-child(1) {
+    bottom: 90%;
+    width: 65px;
+    height: auto;    
+    right: 0;
+    
+}
+
+.wrapper img:nth-child(2) {
+    bottom: 70%;
+    width: 70px;    
+    max-width: 80px;
+    height: auto;
+    left: 2%;
+}
+
+.wrapper img:nth-child(3) {
+    bottom: 50%; 
+    width: 80px;   
+    height: auto;
+ right: -25px;
+}
+
+.wrapper img:nth-child(4) {
+    width: 75px;   
+    height: auto;
+    bottom: 35%;
+    left: -25px;
+}
+
+.wrapper img:nth-child(5) {
+    width: 80px;   
+    height: auto;
+    bottom: 10%;
+    left: 60%;
+}
 }
 .floating {
 animation: bobble 2s infinite;
