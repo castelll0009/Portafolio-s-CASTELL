@@ -1,0 +1,50 @@
+---
+import icon from "../../svgs/icon.svg";
+import { services } from '../../config/cas-services.json'
+import Frontend from "../icons/fronted.astro"
+import LogoCAD from "../logo-CAD.astro";
+---
+<header
+    id="header-hero"
+    class="flex flex-col md:flex-row p-20 gap-5 text-center md:text-left rounderd-xl dark:bg-secondary_dark " style="min-width: 100vw;"
+>
+    <div
+        class="flex-1 text-center"
+        style="align-self: center; display: flex; flex-direction: column; "
+    >
+   {
+      services.map((service) => ( <>
+      <a
+            href="#"
+            class="flex flex-row mt-2 max-w-sm p-6 bg-secondary_dark text-left  max-h-fit min-h-20 rounded-sm shadow hover:bg-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+        >
+        <span>
+            <h5 class="mb-2 text-xl font-normal tracking-tight text-third dark:text-white">{service.title} </h5>
+            <p class="font-normal text-gray-400 dark:text-gray-50">{service.description}</p>
+            <h6 class="text-white ">{service.amount_projects} projects</h6>
+        </span>
+        <span class="text-third">            
+           <Frontend></Frontend>
+        </span>
+            
+        </a>
+      </>))
+   }
+
+      <div class="dark:text-white">
+        <LogoCAD zoom={"1"} theme_text="#00aeff"></LogoCAD>
+      </div>
+        
+    </div>
+
+    <div class="flex-1 text-justify">
+        <h6 id="introduction">Introduction</h6>
+        <h2 class="text-5xl font-bold pb-2 text-left">Hello I'm Ivan Esteban Castillo</h2>
+        <h5 class="italic pt-5 pb-5 font-semibold">
+            Constant effort will always give you results.
+        </h5>
+        <p class="my-4 text-xl text-body">
+            Committed to excellence, I excel in every task, embracing innovation and leaving a distinctive mark. Dedicated professional, I lead my colleagues towards excellence, encouraging continuous improvement. Facing challenges with proactive determination, I embrace new ideas, committed to innovation. Balancing a good sense of humor, my passion for health and sports enriches my commitment to overall success, exceeding expectations and continuous learning in each task.
+        </p>
+    </div>
+</header>

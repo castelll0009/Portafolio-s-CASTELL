@@ -1,0 +1,27 @@
+{
+    "services":[
+        {
+        "title": "Front-end",
+        "description": "I am a brutal frontend expert, fluent in Astro, CSS, Tailwind, React, Next.js and Bootstrap. However, my true talent shines when creating custom solutions with CSS and pure HTML. Ready to take your project to the next level?",
+        "icon_svg":"components/icons/frontend.astro",
+        "amount_projects": "42",
+        "extra":"" 
+
+        },
+        {
+        "title": "Back-end",
+        "description": "In the backend I use jQuery, Node.js, JavaScript, Strapi, PHP and MySQL. I design database systems that allow clients to manage their products autonomously. I improve your control and efficiency.",
+        "icon_svg":"components/icons/frontend.astro",
+        "amount_projects": "35",
+        "icon":"fa-solid fa-laptop-code" 
+
+        },
+        {
+        "title": "Web Services/BD/Stores/CMS",
+        "description": "I offer the comprehensive creation of web pages, web services and database management systems. From product catalogs to statistical analysis, inventory management and CRUD functionalities, I provide complete solutions to boost your business or company.",
+        "icon_svg":"components/icons/frontend.astro",
+        "amount_projects": "3",
+        "icon":"fa-solid fa-laptop-code" 
+        }
+        ]
+}
