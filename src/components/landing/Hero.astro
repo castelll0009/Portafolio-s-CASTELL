@@ -1,6 +1,8 @@
 ---
 import LogoCAD from "../logo-CAD.astro"
 import castell_img from '../../images/castell-pro.png'
+import astro_logo from '../../images/astro-banner.png'
+
 import react from "@astrojs/react";
 import Swiper from "../MySwiper.jsx"
 
@@ -56,29 +58,23 @@ header div p{
     </div>
 
 
-    <div  class="flex-1" style="align-self: center; display: flex; flex-direction: column;" data-zoom={zoomResolution}> 
+    <div  class="flex-1 relative" style="align-self: center; display: flex; flex-direction: column; " data-zoom={zoomResolution}> 
       
-<script is:inline>
-    function toggleDarkMode() {
-        const elementT = document.documentElement;
-        const isDarkMode = elementT.classList.contains("dark");
-        
-        // Asegúrate de realizar las acciones necesarias según el valor de isDarkMode
-        const themeColor = isDarkMode ? '#ffffff' : '#676767';        
-          // Actualiza el tema del LogoCAD
-          const logoCAD = document.querySelector('LogoCAD');
-        if (logoCAD) {
-            logoCAD.setAttribute('theme', themeColor);
-        }
-        // alert(isDarkMode+themeColor);
-    }
-    
-    // Ejecutar cuando se carga la página
-    document.addEventListener('DOMContentLoaded', toggleDarkMode);
+        <div class="wrapper">
+  
+            
+            <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" class="image--cover ">
+                        
+            <img src="https://p7.hiclipart.com/preview/780/57/127/node-js-javascript-database-mongodb-native.jpg" class="image--cover">
+                                                      
+            <img src="https://seeklogo.com/images/S/strapi-icon-logo-2E03188067-seeklogo.com.png" alt="" class="image--cover" />
 
-    // Ejecutar cuando cambia el tema
-    document.addEventListener('theme-change', toggleDarkMode);
-</script>
+            <img src={astro_logo.src} class="image--cover">    
+
+            <img src="https://www.datocms-assets.com/75941/1657707878-nextjs_logo.png" alt="" class="image--cover" />          
+       
+        </div>
+
         <img src={castell_img.src} width="500" height="500" alt="castell" />
        
          <button id="button-action-hero " style="max-width: 155px ; color: themeColor; border-top: 1px solid #67676700  " class="  mx-auto  px-10 py-2 bg-transparent hover:bg-sky-400 rounded-sm text-center  " >
@@ -121,3 +117,57 @@ header div p{
     
         
 </header>
+<!-- stilo circulos -->
+<style>
+.wrapper {
+  padding: 100px;  
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.image--cover {
+ position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 20px;
+
+  object-fit: cover;
+  object-position: center right;
+  background: #242528;
+  padding: 22px;
+}
+
+.wrapper img:nth-child(1) {
+    bottom: 90%;
+    width: 70px;
+    height: auto;    
+    right: 0;
+    
+}
+
+.wrapper img:nth-child(2) {
+    bottom: 70%;
+    width: 15vw;    
+    max-width: 80px;
+    height: auto;
+    left: 10%;
+}
+
+.wrapper img:nth-child(3) {
+    bottom: 50%; 
+ right: 0px;
+}
+
+.wrapper img:nth-child(4) {
+    bottom: 35%;
+    left: 0%;
+}
+
+.wrapper img:nth-child(5) {
+    bottom: 10%;
+    left: 80%;
+}
+
+</style>

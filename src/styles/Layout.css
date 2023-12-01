@@ -2,6 +2,7 @@
 
 @import '@fortawesome/fontawesome-free/css/all.css';
 
+
 html{
     background-color: white;
     color: #202020;
@@ -15,6 +16,8 @@ html{
   }
 html.dark {
     background-color: #202020;
+    background-color: #2b2c30;
+    
     color: #fff;
   }
   
