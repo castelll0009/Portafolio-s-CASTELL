@@ -6,6 +6,7 @@ import arrow_down from '../../images/arrow-down.png'
 
 import react from "@astrojs/react";
 import Swiper from "../MySwiper.jsx"
+import Blackhole from "../Blackhole.astro";
 
 
 // const  themeColor  = '#676767';
@@ -42,7 +43,8 @@ header div p{
 </style>
 
 
-<header id="header-hero" class="flex flex-col md:flex-row  pb-0 p-10 md:p-20 gap-5 text-left text-center md:text-left rounderd-xl ">
+<header id="header-hero" class="flex flex-col md:flex-row  pt-36 pb-0 p-10 md:p-20 gap-5 text-left text-center md:text-left rounderd-xl ">
+    
     <div class="flex-1">        
 
            <div class="md:pl-32">
@@ -75,7 +77,6 @@ header div p{
        
     </div>
 
-
     <div  class="flex-1 relative" style="align-self: center; display: flex; flex-direction: column; " data-zoom={zoomResolution}> 
       
         <div class="wrapper">
@@ -92,14 +93,16 @@ header div p{
             <img src="https://www.datocms-assets.com/75941/1657707878-nextjs_logo.png" alt="" class=" shadow-circle shadow-circle floating image--cover" />          
        
         </div>
-
-        <img src={castell_img.src} width="500" height="500" alt="castell" />
+        
+        <img src={castell_img.src} width="500" height="500" alt="castell" ></img>
        
          <a href="#introduction" id="button-action-hero " style="max-width: 155px ; color: themeColor; border-top: 1px solid #67676700  " class=" z-10  mx-auto  px-10 py-2 bg-transparent   rounded-sm text-center  " >
             Click here!
             <img src={arrow_down.src} class="hover:floating" style="">
             
          </a >
+         
+    
              
     </div>
 

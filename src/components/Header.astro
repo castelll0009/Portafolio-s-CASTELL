@@ -11,9 +11,31 @@ import LogoOnly from '../components/logo-only.astro';
 import DayNight from "../components/CADD/DayNight.astro";
 ---
 
+<!-- Agrega este script al final de tu archivo HTML -->
+<script is:inline>
+   document.addEventListener("DOMContentLoaded", function () {
+     var header = document.querySelector("header");
+     var lastScrollTop = 0;
+ 
+     window.addEventListener("scroll", function () {
+       var st = window.pageYOffset || document.documentElement.scrollTop;
+ 
+       if (st > lastScrollTop) {
+         // Desplazamiento hacia abajo
+         header.style.transform = "translateY(-100%)";
+       } else {
+         // Desplazamiento hacia arriba
+         header.style.transform = "translateY(0)";
+       }
+ 
+       lastScrollTop = st;
+     });
+   });
+ </script>
 
 
-<header class="lg:flex justify-between p-5  gap-5 mx-auto container md:justify-center">
+
+<header class="fixed  lg:flex justify-between p-5  gap-5 mx-auto container md:justify-center z-10" style="backdrop-filter: blur(10px);">
  
    <Astronav closeOnClick>
       <div class="flex w-full items-center  lg:w-auto justify-between">
@@ -26,11 +48,14 @@ import DayNight from "../components/CADD/DayNight.astro";
             <MenuIcon class=" md:w-8 md:h-8  text-current" />
          </div>
       </div>
-      <DayNight></DayNight>              
+           
      
-      <MenuItems class="hidden lg:flex">
-       
+      <MenuItems class="hidden lg:flex">         
+              
          <ul class="flex flex-col lg:flex-row lg:gap-5 mt-5">
+            <li>
+               <DayNight></DayNight>   
+            </li>
             <li>
                <a href="#">Home</a>
             </li>
@@ -247,3 +272,9 @@ import DayNight from "../components/CADD/DayNight.astro";
       </MenuItems>
    </Astronav>
 </header>
+
+<style>
+   ul li{
+      color: gray;
+   }
+</style>
