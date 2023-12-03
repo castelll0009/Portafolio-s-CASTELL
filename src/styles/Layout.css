@@ -40,3 +40,6 @@ html.dark {
   .dark .nav-links a {
     color: #fff;
   }
+  main{
+    min-width: 100%;
+  }
